@@ -7,7 +7,7 @@ interface ContainerProps{
 
 function ContainerBox({ extraClass, children }: ContainerProps) {
     return (
-        <div className={`container-box border border-white p-3 rounded-2xl ${extraClass}`}>
+        <div className={`container-box border border-foreground p-3 rounded-2xl ${extraClass}`}>
 {children}
         </div>
     )

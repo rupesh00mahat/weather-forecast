@@ -31,7 +31,6 @@ function formatTimestamp(timestamp: number) {
 
 
 function HourlyForecast({data}: HourlyForecastProps) {
-  console.log(data);
   return (
     <div className='hourly-forecast my-5'>
       <h3 className='hourly-forecast-title text-lg font-bold mb-5'>Hourly Forecast</h3>
