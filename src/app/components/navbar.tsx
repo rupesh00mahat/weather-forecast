@@ -10,7 +10,7 @@ type Props ={
 
 const Navbar: React.FC<Props> = ({fetchWeather, fetchFromLatAndLon,name}) =>{
   const [darkMode, setDarkMode] = useState(true);
-  const locationRef = useRef(null);
+  const locationRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const isDark = localStorage.getItem("theme") === "dark";
     setDarkMode(isDark);
