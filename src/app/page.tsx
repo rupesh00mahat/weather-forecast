@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
 
-  const [data, setData] = useState<any>();
-  const [forecastData, setForecastData] = useState<any>();
+  const [data, setData] = useState();
+  const [forecastData, setForecastData] = useState();
   const fetchWeather = async (location: string) => {
     await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=f3776047ead711ab4f0e8c88af6e8e0a`) // api for the get request
       .then(response => response.json())
