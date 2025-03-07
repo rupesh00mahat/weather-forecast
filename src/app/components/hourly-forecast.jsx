@@ -3,11 +3,8 @@ import ContainerBox from "./container-box";
 import { WiHumidity } from "react-icons/wi";
 import { MdOutlineWindPower } from "react-icons/md";
 
-interface HourlyForecastProps {
-  data: any;
-}
 
-function formatTimestamp(timestamp: number) {
+function formatTimestamp(timestamp) {
   const date = new Date(timestamp * 1000); // Convert from seconds to milliseconds
 
   const year = date.getFullYear();
@@ -28,7 +25,7 @@ function formatTimestamp(timestamp: number) {
   };
 }
 
-function HourlyForecast({ data }: HourlyForecastProps) {
+function HourlyForecast({ data }) {
   console.log("data", data);
   return (
     <div className="hourly-forecast my-5">
@@ -43,30 +40,6 @@ function HourlyForecast({ data }: HourlyForecastProps) {
               weather,
               main,
               wind,
-            }: {
-              dt: number;
-              weather: {
-                id: number;
-                main: string;
-                description: string;
-                icon: string;
-              };
-              main: {
-                temp: number;
-                feels_like: number;
-                temp_min: number;
-                temp_max: number;
-                pressure: number;
-                sea_level: number;
-                grnd_level: number;
-                humidity: number;
-                temp_kf: number;
-              };
-              wind: {
-                speed: number;
-                deg: number;
-                gust: number;
-              };
             }) => {
               const dateAndTime = formatTimestamp(dt);
               if (dateAndTime.isToday) {
