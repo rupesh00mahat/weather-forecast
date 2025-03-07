@@ -30,7 +30,7 @@ interface WeatherProps {
 
 function WeatherDetail({ temperature, feelsLike, description,icon, wind, humidity, minTemp, maxTemp, clouds, visibility }: WeatherProps) {
   return (
-    <div className=' grid grid-cols-[1fr_3fr] gap-5'>
+    <div className=' grid sm:grid-cols-1 md:grid-cols-[1fr_3fr] gap-5'>
       <ContainerBox extraClass='px-10 pt-10 pb-0'>
         <img src={`https://openweathermap.org/img/w/${icon}.png`} height={"100px"} width={"100px"}/>
 
